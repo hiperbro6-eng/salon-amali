@@ -574,9 +574,26 @@ body::before {
 
         /* --- MOBILE RESPONSIVE FIXES --- */
         @media (max-width: 768px) {
+
             .about-section::before {
                 opacity: 100; 
             }
+
+            body::before {
+                opacity: 100; 
+            }
+
+            .about-content-glass{
+                background: #0e0e0e1c;
+            }
+
+            .section-title h2 {
+                color: #ffaa89;
+            }
+            .section-title h2::after{
+                color: #d4af37;
+            }
+
             /* Navbar Toggle */
             .menu-toggle {
                 display: block;
@@ -596,6 +613,7 @@ body::before {
                 background: rgba(20,20,20,0.97);
                 backdrop-filter: blur(16px);
                 margin-right: 45px;
+                border-radius: 25px;
                 
                 flex-direction: column;
                 align-items: center;
@@ -646,7 +664,7 @@ body::before {
             }
             
             .about-content-glass {
-                padding: 20px;
+                padding: 15px;
             }
             
             .about-content-glass h3 {
