@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Amali</title>
+    <link rel="icon" type="image/png" href="favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo" data-aos="fade-down">
+            <a href="#home">
+                <img src="logo.jpg" alt="Salon Amali Logo">
+            </a>
+        </div>
+        
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav data-aos="fade-down" data-aos-delay="100">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
+            <h1> </h1>
+            <p>Where Elegance Meets Excellence</p>
+            <a href="#contact" class="glass-btn">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-title" data-aos="fade-up">
+            <h2>The Art of Elegance</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-image-wrapper" data-aos="fade-right">
+                <img src="bridal1.jpg" alt="Salon Amali Experience">
+            </div>
+            <div class="about-content-glass" data-aos="fade-left">
+                <h3>Our Story</h3>
+                <p>At Salon Amali, we don't just dress brides; we curate memories. Nestled in Hingurakgoda, we bring a touch of international luxury to your special day. Our philosophy balances timeless traditional artistry with modern sophistication.</p>
+                <p>Every brushstroke and every hair pin is placed with precision. Whether you are walking down the aisle or preparing for a gala, our premium sanctuary is designed to make you feel like royalty.</p>
+                <a href="#contact" style="color: var(--secondary-red); font-weight: 700; text-decoration: none;">Start Your Journey →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-slider-section">
+        <div class="services-header">
+            <h2>Our Services</h2>
+            <p>Dive into our world of care and signature treatments at our renowned beauty salon.</p>
+        </div>
+    
+        <div class="services-slider-wrapper">
+            <button class="slider-btn left" onclick="slideServices(-1)">❮</button>
+    
+            <div class="services-slider" id="servicesSlider">
+                <div class="service-item">
+                    <i class="fas fa-crown"></i>
+                    <h4>Mul Adun</h4>
+                    <p>Traditional Sri Lankan bridal elegance</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Coat Rentals</h4>
+                    <p>Luxury ceremonial outfits</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Bridal Dressing</h4>
+                    <p>Complete bridal transformation</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-ring"></i>
+                    <h4>Homecoming</h4>
+                    <p>Perfect looks for your return</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-users"></i>
+                    <h4>Bridesmaids</h4>
+                    <p>Coordinated beauty styling</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-spa"></i>
+                    <h4>Facials</h4>
+                    <p>Glow-enhancing treatments</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Clean-ups</h4>
+                    <p>Deep cleansing & care</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Nail Artistry</h4>
+                    <p>Creative nail designs</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-sun"></i>
+                    <h4>Skin Brightening</h4>
+                    <p>Radiant skin rituals</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-cut"></i>
+                    <h4>Haircuts</h4>
+                    <p>Precision & modern styles</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-fill-drip"></i>
+                    <h4>Hair Coloring</h4>
+                    <p>Creative & classic shades</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-stream"></i>
+                    <h4>Rebonding</h4>
+                    <p>Sleek & smooth finishes</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h4>Hair Treatments</h4>
+                    <p>Advanced hair care</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-magic"></i>
+                    <h4>Normal Makeup</h4>
+                    <p>Elegant everyday looks</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-gem"></i>
+                    <h4>Party Styling</h4>
+                    <p>Hair & saree draping</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-camera"></i>
+                    <h4>Photoshoots</h4>
+                    <p>Camera-ready perfection</p>
+                </div>
+    
+                <div class="service-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Graduation</h4>
+                    <p>Confident milestone looks</p>
+                </div>
+            </div>
+    
+            <button class="slider-btn right" onclick="slideServices(1)">❯</button>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Our Bridal Masterpieces</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="zoom-in">
+                <img src="t1.jpg" alt="Bride 1">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h4>Traditional</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="bridal2.jpg" alt="Bride 2">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h4>Glamour</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <img src="g1.jpg" alt="Bride 3">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h4>Elegance</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <img src="t2.jpg" alt="Bride 4">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h4>Luxe</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <img src="t6.jpg" alt="Bride 4">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h4>Divine</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <img src="t3.jpg" alt="Bride 4">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">
+                        <h4>Radiance</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-title" data-aos="fade-up">
+            <h2 style="color: var(--text-light);">Get in Touch</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <div class="contact-details">
+                        <h4>Visit Us</h4>
+                        <p>No. 82, Airport Road, Hingurakgoda, Sri Lanka</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <div class="contact-details">
+                        <h4>Call Us</h4>
+                        <p><a href="tel:0777793422">+94 77 779 3422</a> (Normal)</p>
+                        <p><a href="https://wa.me/94704252995">+94 70 425 2995</a> (WhatsApp)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:amalimeanushika6@gmail.com">amalimeanushika6@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item" style="margin-top: 40px;">
+                     <a href="https://www.facebook.com/people/Salon-Amali/100064281272885/" target="_blank" class="glass-btn" style="padding: 12px 30px;">Follow on Facebook</a>
+                </div>
+            </div>
+            <div class="map-container" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5540992275064!2d80.95963320934808!3d8.044820703586616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb6778d50a2eb9%3A0x25417aef4cd5c40e!2sSalon%20Amali!5e0!3m2!1sen!2slk!4v1770090912032!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links" data-aos="fade-up">
+            <a href="https://www.facebook.com/people/Salon-Amali/100064281272885/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/94704252995"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            <p>© 2005 Salon Amali. All rights reserved. Crafted with elegance.</p>
+        </div>
+    </footer>
+    <script>
+    window.history.scrollRestoration = "manual";
+
+    window.onload = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Header transparency toggle
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile Menu Toggle
+        const toggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        toggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+   
+   <script>
+const slider = document.getElementById("servicesSlider");
+let autoSlide;
+
+/* SETTINGS */
+const visibleCount = 4;
+const gap = 12;
+
+/* ORIGINAL ITEMS */
+const items = Array.from(slider.children);
+const total = items.length;
+
+/* CLONE LAST ITEMS TO FRONT */
+for (let i = total - visibleCount; i < total; i++) {
+    slider.prepend(items[i].cloneNode(true));
+}
+
+/* CLONE FIRST ITEMS TO END */
+for (let i = 0; i < visibleCount; i++) {
+    slider.appendChild(items[i].cloneNode(true));
+}
+
+/* GET ITEM WIDTH */
+function getItemWidth() {
+    return slider.querySelector(".service-item").offsetWidth + gap;
+}
+
+/* START AT REAL FIRST ITEM (Mul Adun) */
+function setStartPosition() {
+    slider.scrollLeft = getItemWidth() * visibleCount;
+}
+setStartPosition();
+
+/* MOVE SLIDER */
+function moveSlider(direction) {
+    const itemWidth = getItemWidth();
+
+    slider.scrollBy({
+        left: direction * itemWidth,
+        behavior: "smooth"
+    });
+
+    setTimeout(() => {
+        /* If moved too far RIGHT */
+        if (slider.scrollLeft >= itemWidth * (total + visibleCount)) {
+            slider.style.scrollBehavior = "auto";
+            slider.scrollLeft = itemWidth * visibleCount;
+            slider.style.scrollBehavior = "smooth";
+        }
+
+        /* If moved too far LEFT */
+        if (slider.scrollLeft <= 0) {
+            slider.style.scrollBehavior = "auto";
+            slider.scrollLeft = itemWidth * total;
+            slider.style.scrollBehavior = "smooth";
+        }
+    }, 400);
+}
+
+/* BUTTONS */
+function slideServices(direction) {
+    moveSlider(direction);
+}
+
+/* AUTO SLIDE (RIGHT ONLY) */
+function startAutoSlide() {
+    autoSlide = setInterval(() => moveSlider(1), 2000);
+}
+
+slider.addEventListener("mouseenter", () => clearInterval(autoSlide));
+slider.addEventListener("mouseleave", startAutoSlide);
+
+startAutoSlide();
+</script>
+
+</body>
+</html>
