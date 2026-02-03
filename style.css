@@ -37,7 +37,7 @@
     position: fixed;
     inset: 0;
     background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
-    opacity: 0.18;
+    opacity: 0.35;
     pointer-events: none;
     z-index: -1;
     }
@@ -567,6 +567,9 @@
         /* --- MOBILE RESPONSIVE FIXES --- */
         @media (max-width: 768px) {
 
+            .about-section {
+                opacity: 0.45;
+            }
             /* Navbar Toggle */
             .menu-toggle {
                 display: block;
