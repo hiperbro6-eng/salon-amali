@@ -545,7 +545,7 @@
             .menu-toggle {
                 display: block;
                 position: absolute;
-                right: 125px;
+                right: 130px;
                 top: 50%;
                 transform: translateY(-50%);
                 margin: 0;
@@ -554,9 +554,9 @@
                 position: fixed;
                 top: 33px; /* same as header height */
                 right: -100%;
-                width: 35%;
+                width: 30%;
                 max-width: 320px;
-                height: calc(60vh - 70px);
+                height: calc(65vh - 200px);
                 background: rgba(20,20,20,0.97);
                 backdrop-filter: blur(16px);
                 margin-right: 100px;
