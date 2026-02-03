@@ -216,10 +216,7 @@ body::before {
     }
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
+
         .hero-content p {
             
             font-size: 3rem;
@@ -649,47 +646,17 @@ body::before {
 
             /* Hero: Fix fixed background on mobile */
             .hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-light);
-     align-items: flex-end;
-        padding-bottom: 140px;
-}
-.hero::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background:
-        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
-        url("hero-bride.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    z-index: -1;
-    transform: translateZ(0); /* iOS smoothness */
-}
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center top;
+                margin-top: -100px;
+            }
 
             .hero-content h1 {
                 margin-top: 390px;
                 font-size: 3rem;
-                font-size: 3rem;
-        margin: 0;
                 
             }
-             .hero-content p {
-        font-size: 1.6rem;
-    }
 
             /* About: Keep side-by-side layout (Image Left, Text Right) */
             .about-container {
