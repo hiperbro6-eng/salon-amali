@@ -272,7 +272,7 @@ body::before {
     position: absolute;
     inset: 0;
 
-    background-image: url("diamond.png");
+    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
     background-repeat: repeat;
 
     opacity: 0.5;                     
@@ -574,7 +574,9 @@ body::before {
 
         /* --- MOBILE RESPONSIVE FIXES --- */
         @media (max-width: 768px) {
-
+            .about-section::before {
+                opacity: 100; 
+            }
             /* Navbar Toggle */
             .menu-toggle {
                 display: block;
