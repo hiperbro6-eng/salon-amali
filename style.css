@@ -587,6 +587,13 @@ body::before {
                 background: #0e0e0e1c;
             }
 
+            .about-content-glass h3{
+                color: #ffffff;
+            }
+            .about-content-glass p{
+                color: #b8b8b8;
+            }
+
             .section-title h2 {
                 color: #ffaa89;
             }
