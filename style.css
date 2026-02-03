@@ -20,27 +20,29 @@
             scroll-behavior: smooth;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            overflow-x: hidden;
-            background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png"); /* Subtle texture */
-            background-color: #fdfbf7;
-            position: relative;
-        }
+       body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f6f1ea; /* warm cream base */
+    color: var(--text-dark);
+    position: relative;
+    overflow-x: hidden;
+}
 
-        body::before {
+/* Paper texture layer */
+body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
-    opacity: 0.18;
+
+    background-image: url("paper.png");
+    background-repeat: repeat;
+
+    opacity: 0.35;          /* 👈 visible on mobile */
     pointer-events: none;
     z-index: -1;
-    }
+}
+
 
         h1, h2, h3 {
             font-family: 'Cinzel', serif;
@@ -256,21 +258,27 @@
 
         /* --- Upgraded About Section --- */
         .about-section {
-            position: relative;
-            background: linear-gradient(
-                rgba(255,255,255,0.9),
-                rgba(255,255,255,0.8)
-            );
-            overflow: hidden;
-            }
-            .about-section::before {
+    position: relative;
+    background: linear-gradient(
+        #f7f2eb,
+        #efe6db
+    );
+    overflow: hidden;
+}
+
+/* Diamond texture */
+.about-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
-    opacity: 0.25;
+
+    background-image: url("diamond.png");
+    background-repeat: repeat;
+
+    opacity: 0.5;                     
     pointer-events: none;
-        }
+}
+
 
 
         .about-container {
@@ -857,7 +865,7 @@
     position: absolute;
     top: 50%;
     font-size: 40px;
-    color: #fff;
+    color: #975a95;
     cursor: pointer;
     padding: 15px;
     user-select: none;
