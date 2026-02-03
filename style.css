@@ -146,6 +146,13 @@ body::before {
             padding-bottom: 5px;
             transition: color 0.3s;
         }
+.section-subtitle {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: #8a6b5c;
+    text-transform: uppercase;
+}
 
         nav ul li a:hover {
             color: #c58989;
@@ -593,12 +600,40 @@ body::before {
             .about-content-glass p{
                 color: #b8b8b8;
             }
+.about-image-wrapper img {
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+     .about-section {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
 
+    .section-title {
+        margin-bottom: 30px;
+    }
             .section-title h2 {
                 color: #ffaa89;
+                position: relative;
+                padding-bottom: 12px;
+                font-size: 2rem;
+                letter-spacing: 2px;
             }
             .section-title h2::after{
                 color: #d4af3700;
+                content: "";
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            #d4af37,
+            transparent
+        );
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
             }
 
             /* Navbar Toggle */
