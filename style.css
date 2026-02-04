@@ -38,7 +38,7 @@ body::before {
     background-image: url("paper.png");
     background-repeat: repeat;
 
-    opacity: 0.35;          /* 👈 visible on mobile */
+    opacity: 50;          /* 👈 visible on mobile */
     pointer-events: none;
     z-index: -1;
 }
@@ -282,7 +282,7 @@ body::before {
     background-image: url("diamond.png");
     background-repeat: repeat;
 
-    opacity: 0.5;                     
+    opacity: 50;                     
     pointer-events: none;
 }
 
