@@ -1,459 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Amali</title>
-    <link rel="icon" type="image/png" href="favicon.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8" />
+  <title>Salon Amali</title>
+  <link rel="icon" type="image/png" href="favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+ crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  
+  <div class="lux-loader" id="luxLoader">
+  <div class="lux-loader-inner">
+    <span class="lux-line"></span>
 
-    <header>
-        <div class="logo" data-aos="fade-down">
-            <a href="#home">
-                <img src="logo.jpg" alt="Salon Amali Logo">
-            </a>
-        </div>
-        
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
+    <img src="images/hero-logo.png"
+         alt="Salon Amali"
+         class="lux-logo">
 
-        <nav data-aos="fade-down" data-aos-delay="100">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
-            <h1> </h1>
-            <p>Where Elegance Meets Excellence</p>
-            <a href="#contact" class="glass-btn">Book Your Appointment</a>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="section-title" data-aos="fade-up">
-            <h2>The Art of Elegance</h2>
-            <p class="section-subtitle">Where tradition meets modern bridal artistry</p>
-
-        </div>
-        <div class="about-container">
-            <div class="about-image-wrapper" data-aos="fade-right">
-                <img src="bridal1.jpg" alt="Salon Amali Experience">
-            </div>
-            <div class="about-content-glass" data-aos="fade-left">
-                <h3>Our Story</h3>
-                <p>At Salon Amali, we don't just dress brides; we curate memories. Nestled in Hingurakgoda, we bring a touch of international luxury to your special day. Our philosophy balances timeless traditional artistry with modern sophistication.</p>
-                <p>Every brushstroke and every hair pin is placed with precision. Whether you are walking down the aisle or preparing for a gala, our premium sanctuary is designed to make you feel like royalty.</p>
-                <a href="#contact" style="color: var(--secondary-red); font-weight: 700; text-decoration: none;">Start Your Journey →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services-slider-section">
-        <div class="services-header">
-            <h2>Our Services</h2>
-            <p>Dive into our world of care and signature treatments at our renowned beauty salon.</p>
-        </div>
-    
-        <div class="services-slider-wrapper">
-            <button class="slider-btn left" onclick="slideServices(-1)">❮</button>
-    
-            <div class="services-slider" id="servicesSlider">
-                <div class="service-item">
-                    <i class="fas fa-crown"></i>
-                    <h4>Mul Adun</h4>
-                    <p>Traditional Sri Lankan bridal elegance</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-user-tie"></i>
-                    <h4>Coat Rentals</h4>
-                    <p>Luxury ceremonial outfits</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-heart"></i>
-                    <h4>Bridal Dressing</h4>
-                    <p>Complete bridal transformation</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-ring"></i>
-                    <h4>Homecoming</h4>
-                    <p>Perfect looks for your return</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-users"></i>
-                    <h4>Bridesmaids</h4>
-                    <p>Coordinated beauty styling</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-spa"></i>
-                    <h4>Facials</h4>
-                    <p>Glow-enhancing treatments</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Clean-ups</h4>
-                    <p>Deep cleansing & care</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-paint-brush"></i>
-                    <h4>Nail Artistry</h4>
-                    <p>Creative nail designs</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-sun"></i>
-                    <h4>Skin Brightening</h4>
-                    <p>Radiant skin rituals</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-cut"></i>
-                    <h4>Haircuts</h4>
-                    <p>Precision & modern styles</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-fill-drip"></i>
-                    <h4>Hair Coloring</h4>
-                    <p>Creative & classic shades</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-stream"></i>
-                    <h4>Rebonding</h4>
-                    <p>Sleek & smooth finishes</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-hand-sparkles"></i>
-                    <h4>Hair Treatments</h4>
-                    <p>Advanced hair care</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-magic"></i>
-                    <h4>Normal Makeup</h4>
-                    <p>Elegant everyday looks</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-gem"></i>
-                    <h4>Party Styling</h4>
-                    <p>Hair & saree draping</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-camera"></i>
-                    <h4>Photoshoots</h4>
-                    <p>Camera-ready perfection</p>
-                </div>
-    
-                <div class="service-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Graduation</h4>
-                    <p>Confident milestone looks</p>
-                </div>
-            </div>
-    
-            <button class="slider-btn right" onclick="slideServices(1)">❯</button>
-        </div>
-    </section>
-
-    <section id="gallery">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Our Bridal Masterpieces</h2>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item" data-aos="zoom-in">
-                <img src="t1.jpg" alt="Bride 1">
-                <div class="gallery-overlay">
-                    <div class="gallery-text">
-                        <h4>Traditional</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="bridal2.jpg" alt="Bride 2">
-                <div class="gallery-overlay">
-                    <div class="gallery-text">
-                        <h4>Glamour</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="g1.jpg" alt="Bride 3">
-                <div class="gallery-overlay">
-                    <div class="gallery-text">
-                        <h4>Elegance</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="t2.jpg" alt="Bride 4">
-                <div class="gallery-overlay">
-                    <div class="gallery-text">
-                        <h4>Luxe</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="t6.jpg" alt="Bride 4">
-                <div class="gallery-overlay">
-                    <div class="gallery-text">
-                        <h4>Divine</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="t3.jpg" alt="Bride 4">
-                <div class="gallery-overlay">
-                    <div class="gallery-text">
-                        <h4>Radiance</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="section-title" data-aos="fade-up">
-            <h2 style="color: var(--text-light);">Get in Touch</h2>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info" data-aos="fade-right">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <div class="contact-details">
-                        <h4>Visit Us</h4>
-                        <p>No. 82, Airport Road, Hingurakgoda, Sri Lanka</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt contact-icon"></i>
-                    <div class="contact-details">
-                        <h4>Call Us</h4>
-                        <p><a href="tel:0777793422">+94 77 779 3422</a> (Normal)</p>
-                        <p><a href="https://wa.me/94704252995">+94 70 425 2995</a> (WhatsApp)</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <div class="contact-details">
-                        <h4>Email Us</h4>
-                        <p><a href="mailto:amalimeanushika6@gmail.com">amalimeanushika6@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="contact-item" style="margin-top: 40px;">
-                     <a href="https://www.facebook.com/people/Salon-Amali/100064281272885/" target="_blank" class="glass-btn" style="padding: 12px 30px;">Follow on Facebook</a>
-                </div>
-            </div>
-            <div class="map-container" data-aos="fade-left">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5540992275064!2d80.95963320934808!3d8.044820703586616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb6778d50a2eb9%3A0x25417aef4cd5c40e!2sSalon%20Amali!5e0!3m2!1sen!2slk!4v1770090912032!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/people/Salon-Amali/100064281272885/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/94704252995"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="copyright">
-            <p>© 2005 Salon Amali. All rights reserved. Crafted with elegance.</p>
-        </div>
-    </footer>
-    <script>
-    window.history.scrollRestoration = "manual";
-
-    window.onload = function () {
-        window.scrollTo(0, 0);
-    };
-</script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Header transparency toggle
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Mobile Menu Toggle
-        const toggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-
-        toggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
-   
-   <script>
-const slider = document.getElementById("servicesSlider");
-let autoSlide;
-
-/* SETTINGS */
-const visibleCount = 4;
-const gap = 12;
-
-/* ORIGINAL ITEMS */
-const items = Array.from(slider.children);
-const total = items.length;
-
-/* CLONE LAST ITEMS TO FRONT */
-for (let i = total - visibleCount; i < total; i++) {
-    slider.prepend(items[i].cloneNode(true));
-}
-
-/* CLONE FIRST ITEMS TO END */
-for (let i = 0; i < visibleCount; i++) {
-    slider.appendChild(items[i].cloneNode(true));
-}
-
-/* GET ITEM WIDTH */
-function getItemWidth() {
-    return slider.querySelector(".service-item").offsetWidth + gap;
-}
-
-/* START AT REAL FIRST ITEM (Mul Adun) */
-function setStartPosition() {
-    slider.scrollLeft = getItemWidth() * visibleCount;
-}
-setStartPosition();
-
-/* MOVE SLIDER */
-function moveSlider(direction) {
-    const itemWidth = getItemWidth();
-
-    slider.scrollBy({
-        left: direction * itemWidth,
-        behavior: "smooth"
-    });
-
-    setTimeout(() => {
-        /* If moved too far RIGHT */
-        if (slider.scrollLeft >= itemWidth * (total + visibleCount)) {
-            slider.style.scrollBehavior = "auto";
-            slider.scrollLeft = itemWidth * visibleCount;
-            slider.style.scrollBehavior = "smooth";
-        }
-
-        /* If moved too far LEFT */
-        if (slider.scrollLeft <= 0) {
-            slider.style.scrollBehavior = "auto";
-            slider.scrollLeft = itemWidth * total;
-            slider.style.scrollBehavior = "smooth";
-        }
-    }, 400);
-}
-
-/* BUTTONS */
-function slideServices(direction) {
-    moveSlider(direction);
-}
-
-/* AUTO SLIDE (RIGHT ONLY) */
-function startAutoSlide() {
-    autoSlide = setInterval(() => moveSlider(1), 2000);
-}
-
-slider.addEventListener("mouseenter", () => clearInterval(autoSlide));
-slider.addEventListener("mouseleave", startAutoSlide);
-
-startAutoSlide();
-</script>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-img" src="" alt="">
-    <span class="lightbox-nav prev">&#10094;</span>
-    <span class="lightbox-nav next">&#10095;</span>
+    <p class="lux-tagline">Where Elegance Meets Tradition</p>
+  </div>
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-    const galleryImages = document.querySelectorAll(".gallery-item img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.querySelector(".lightbox-img");
-    const closeBtn = document.querySelector(".lightbox-close");
-    const nextBtn = document.querySelector(".lightbox-nav.next");
-    const prevBtn = document.querySelector(".lightbox-nav.prev");
+<!-- ================= NAVBAR (CSS-only mobile menu) ================= -->
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="#home" aria-label="Salon Amali Home">Salon Amali</a>
 
-    let currentIndex = 0;
+    <!-- mobile toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
 
-    galleryImages.forEach((img, index) => {
-        img.addEventListener("click", () => {
-            currentIndex = index;
-            lightboxImg.src = img.src;
-            lightbox.classList.add("active");
-            document.body.style.overflow = "hidden";
-        });
-    });
+    <ul class="nav-links">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#services">SERVICE</a></li>
+      <li><a href="#gallery">GALLERY</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
 
-    function closeLightbox() {
-        lightbox.classList.remove("active");
-        document.body.style.overflow = "";
-    }
+<!-- ================= HERO ================= -->
+<header class="hero" id="home">
 
-    closeBtn.addEventListener("click", closeLightbox);
+  <div class="sparkles"></div>
 
-    lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
+  <!-- Petals (pseudo-random with CSS variables) -->
+  <div class="petals" aria-hidden="true">
+    <!-- add/remove spans -->
+    <span style="--left: 6%;  --size: 10px; --dur: 12s; --delay: -2s; --drift: 22px;"></span>
+    <span style="--left: 14%; --size: 14px; --dur: 16s; --delay: -7s; --drift: 35px;"></span>
+    <span style="--left: 22%; --size: 9px;  --dur: 11s; --delay: -4s; --drift: 18px;"></span>
+    <span style="--left: 31%; --size: 13px; --dur: 18s; --delay: -9s; --drift: 40px;"></span>
+    <span style="--left: 40%; --size: 11px; --dur: 14s; --delay: -5s; --drift: 28px;"></span>
+    <span style="--left: 52%; --size: 8px;  --dur: 13s; --delay: -1s; --drift: 20px;"></span>
+    <span style="--left: 63%; --size: 15px; --dur: 19s; --delay: -8s; --drift: 45px;"></span>
+    <span style="--left: 74%; --size: 10px; --dur: 12.5s; --delay: -6s; --drift: 26px;"></span>
+    <span style="--left: 83%; --size: 12px; --dur: 17s; --delay: -3s; --drift: 38px;"></span>
+    <span style="--left: 92%; --size: 9px;  --dur: 15s; --delay: -10s;--drift: 24px;"></span>
+    <span style="--left: 10%; --size: 7px;  --dur: 20s; --delay: -12s;--drift: 18px;"></span>
+    <span style="--left: 58%; --size: 12px; --dur: 21s; --delay: -14s;--drift: 42px;"></span>
+  </div>
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        lightboxImg.src = galleryImages[currentIndex].src;
-    });
+  <div class="hero-inner">
+    <div class="hero-content">
+      <!--  logo already contains tagline -->
+      <img src="images/hero-logo.png" class="hero-logo"  data-aos="fade-up"
+     data-aos-delay="100" alt="Salon Amali">
 
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        lightboxImg.src = galleryImages[currentIndex].src;
-    });
+      <a href="#services" class="btn btn-primary" data-aos="fade-up"
+   data-aos-delay="300">LEARN MORE →</a>
+    </div>
 
-    // iPhone swipe
-    let startX = 0;
-    lightbox.addEventListener("touchstart", e => {
-        startX = e.touches[0].clientX;
-    });
+    <div class="hero-image">
+      <img src="images/bride.png" alt="Bridal">
+    </div>
+  </div>
+</header>
 
-    lightbox.addEventListener("touchend", e => {
-        const endX = e.changedTouches[0].clientX;
-        if (startX - endX > 50) nextBtn.click();
-        if (endX - startX > 50) prevBtn.click();
-    });
+<section class="about-section" id="about">
 
-});
-</script>
+  <span class="about-shape shape-1"></span>
+<span class="about-shape shape-2"></span>
+<span class="about-shape shape-3"></span>
+
+  <div class="about-watermark">AMALI</div>
+
+  <div class="about-bg"></div>
+
+  <div class="about-container">
+
+    <!-- TEXT -->
+    <div class="about-text reveal" data-aos="fade-right" >
+      <h2>
+        ABOUT SALON AMALI
+        <span class="gold-line"></span>
+      </h2>
+
+      <p class="tagline">Where Elegance Meets Tradition</p>
+
+      <p>
+        Salon Amali is a luxury beauty destination dedicated to crafting
+        timeless elegance for every woman. We blend traditional Sri Lankan
+        artistry with modern beauty techniques to create unforgettable looks.
+      </p>
+
+      <p>
+        From bridal dressing and Mul Adun to advanced skincare and hair care,
+        our passion lies in precision, comfort, and confidence.
+      </p>
+
+      <p class="signaturee">✦ Beauty. Grace. Perfection. ✦</p>
+
+        <div class="about-stats">
+  <div class="stat">
+    <span>8+</span>
+    <p>Years Experience</p>
+  </div>
+  <div class="stat">
+    <span>500+</span>
+    <p>Brides Styled</p>
+  </div>
+  <div class="stat">
+    <span>20+</span>
+    <p>Beauty Services</p>
+  </div>
+</div>
+
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="about-image reveal" data-aos="fade-left" data-aos-delay="400">
+      <div class="liquid-wave scroll-wave">
+        <img src="images/about-bride.jpg" class="img-base" alt="Salon Amali">
+        <img src="images/about-bride-hover.jpg" class="img-hover" alt="Salon Amali Glam">
+        <span class="wave"></span>
+      </div>
+    </div>
+
+   
+
+  </div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+
+  <!-- Decorative rose -->
+  <div class="rose" aria-hidden="true">
+    <img src="images/rose.png" alt="">
+  </div>
+
+  <div class="services-wrap">
+
+    <!-- Top row: text + 3 cards -->
+    <div class="services-top" data-aos="fade-up">
+      <div class="services-text" >
+        <h2>OUR SERVICES</h2>
+        <p>
+          DIVE INTO OUR WORLD OF<br>
+          CARE AND SIGNATURE<br>
+          TREATMENTS AT OUR<br>
+          RENOWNED BEAUTY SALON.
+        </p>
+        <a class="btn btn-outline" href="#contact">BOOK NOW →</a>
+      </div>
+
+      <div class="services-top-cards">
+        <div class="service-card" >
+          <img src="images/bridal.png" alt="">
+          <h3>BRIDAL DRESSING</h3>
+          <p>COMPLETE BRIDAL TRANSFORMATION</p>
+        </div>
+
+        <div class="service-card">
+          <img src="images/mul-adun.png" alt="">
+          <h3>MUL ADUN</h3>
+          <p>TRADITIONAL SRI LANKAN BRIDAL ELEGANCE</p>
+        </div>
+
+        <div class="service-card">
+          <img src="images/facial.png" alt="">
+          <h3>FACIALS</h3>
+          <p>GLOW-ENHANCING TREATMENTS, DEEP CLEANSING & CARE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row: 5 cards fill -->
+    <div class="services-bottom" data-aos="fade-up">
+      <div class="service-card">
+        <img src="images/nails.png" alt="">
+        <h3>NAIL ARTISTRY</h3>
+        <p>CREATIVE NAIL DESIGNS</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/hair.png" alt="">
+        <h3>HAIR CENTER</h3>
+        <p>PRECISION, CLASSIC SHADES, SLEEK & SMOOTH FINISHES</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/makeup.png" alt="">
+        <h3>NORMAL MAKEUP</h3>
+        <p>ELEGANT EVERYDAY LOOKS</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/homecoming.png" alt="">
+        <h3>HOMECOMING</h3>
+        <p>PERFECT LOOKS FOR YOUR RETURN</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/coat.png" alt="">
+        <h3>COAT RENTALS</h3>
+        <p>LUXURY CEREMONIAL OUTFITS</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery-section" id="gallery">
+
+  <div class="gallery-header" data-aos="fade-up" >
+    <h2>OUR BRIDAL MASTERPIECES</h2>
+    <p>
+      A curated showcase of our finest bridal transformations,
+      crafted with elegance, tradition, and timeless beauty.
+    </p>
+  </div>
+
+  <div class="gallery" data-aos="zoom-in" data-aos-duration="900">
+
+    <div class="gallery-card active">
+      <img src="images/gallery1.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery2.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery3.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery4.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery5.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery6.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery7.jpg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery8.jpg" alt="">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="contact-section" id="contact">
+
+  <!-- Background word -->
+  <div class="contact-watermark">CONTACT</div>
+
+  <!-- Floating shapes -->
+  <span class="contact-shape shape-1"></span>
+  <span class="contact-shape shape-2"></span>
+
+  <div class="contact-container reveal">
+
+    <!-- LEFT -->
+    <div class="contact-info" data-aos="fade-right">
+      <h2>CONTACT US</h2>
+      <p class="contact-sub">Let’s create something beautiful together</p>
+
+      <div class="contact-cards">
+
+        <div class="contact-card">
+          <span>📞</span>
+          <div>
+            <a href="tel:0777793422">+94 77 779 3422</a><br>
+            <a href="https://wa.me/94704252995" target="_blank">
+              +94 70 425 2995 (WhatsApp)
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span>✉️</span>
+          <a href="mailto:amalimeanushika6@gmail.com">
+            amalimeanushika6@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <span>📍</span>
+          <p>
+            No. 82, Airport Road,<br>
+            Hingurakgoda,<br>
+            Sri Lanka
+          </p>
+        </div>
+
+      </div>
+
+      <a class="facebook-btn"
+         href="https://www.facebook.com/people/Salon-Amali/100064281272885/"
+         target="_blank">
+        Follow us on Facebook →
+      </a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-map" data-aos="fade-left" data-aos-delay="200">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5540992275064!2d80.95963320934808!3d8.044820703586616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb6778d50a2eb9%3A0x25417aef4cd5c40e!2sSalon%20Amali!5e0!3m2!1sen!2slk!4v1770090912032!5m2!1sen!2slk"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- DARK / LIGHT MODE TOGGLE -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+  <span class="sun">☀</span>
+  <span class="moon">🌙</span>
+
+  <div class="page-transition" aria-hidden="true"></div>
+
+
+</button>
 
 
 </body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<footer class="site-footer">
+
+  <div class="footer-socials">
+
+    <a href="https://www.facebook.com/people/Salon-Amali/100064281272885/"
+       target="_blank"
+       aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://wa.me/94704252995"
+       target="_blank"
+       aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="mailto:amalimeanushika6@gmail.com"
+       aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+  </div>
+
+  <p class="footer-copy">
+    © 2005 Salon Amali. All rights reserved. Crafted with elegance.
+  </p>
+
+</footer>
+
+<!-- GSAP (locked version) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+
+<!-- Lenis (Apple-style smooth scroll) -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+
+<script>
+  const galleryCards = document.querySelectorAll(".gallery-card");
+
+  galleryCards.forEach(card => {
+    card.addEventListener("click", () => {
+      galleryCards.forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+    });
+  });
+</script>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  reveals.forEach(el => revealObserver.observe(el));
+</script>
+
+<script>
+  const about = document.querySelector('.about-section');
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    about.style.backgroundPosition = `center ${y * 0.1}px`;
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved mode
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+
+<script>
+  document.querySelectorAll(".btn, .facebook-btn").forEach(btn => {
+    btn.addEventListener("mousemove", e => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "translate(0,0)";
+    });
+  });
+</script>
+
+<script>
+  const heroImg = document.querySelector(".hero-image img");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    heroImg.style.transform = `translateY(${scrollY * 0.08}px)`;
+  });
+</script>
+<script>
+  let galleryIndex = 0;
+  const cards = document.querySelectorAll(".gallery-card");
+
+  setInterval(() => {
+    cards.forEach(c => c.classList.remove("active"));
+    cards[galleryIndex].classList.add("active");
+    galleryIndex = (galleryIndex + 1) % cards.length;
+  }, 3500);
+</script>
+<script>
+  const sparkleWrap = document.querySelector(".sparkles");
+
+  for(let i=0;i<18;i++){
+    const s = document.createElement("span");
+    s.style.left = Math.random()*100 + "%";
+    s.style.bottom = "-10px";
+    s.style.animationDelay = Math.random()*6 + "s";
+    sparkleWrap.appendChild(s);
+  }
+</script>
+<script>
+  window.addEventListener("load", () => {
+    document.body.style.opacity = "1";
+  });
+</script>
+<script>
+/* =========================
+   APPLE-LIKE SMOOTH SCROLL (LENIS) + GSAP
+========================= */
+const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+let lenis = null;
+if (!prefersReduced) {
+  lenis = new Lenis({
+    duration: 1.15,
+    smoothWheel: true,
+    smoothTouch: false,
+    wheelMultiplier: 0.95,
+    touchMultiplier: 1.0
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // keep ScrollTrigger in sync
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((t) => lenis.raf(t * 1000));
+  gsap.ticker.lagSmoothing(0);
+}
+
+/* =========================
+   LUXURY NAV + SECTION TRANSITION
+========================= */
+const overlay = document.querySelector(".page-transition");
+
+function playSectionTransition(onMid) {
+  if (prefersReduced) { onMid?.(); return; }
+
+  const tl = gsap.timeline();
+  tl.set(overlay, { opacity: 1, scaleY: 0, transformOrigin: "top" })
+    .to(overlay, { scaleY: 1, duration: 0.45, ease: "power3.inOut" })
+    .add(() => onMid?.())
+    .to(overlay, { scaleY: 0, duration: 0.55, ease: "power3.inOut", transformOrigin: "bottom", delay: 0.05 })
+    .set(overlay, { opacity: 0 });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", (e) => {
+    const href = a.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+
+    playSectionTransition(() => {
+      // close mobile menu if open
+      const navToggle = document.getElementById("nav-toggle");
+      if (navToggle) navToggle.checked = false;
+
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -75 }); // offset for fixed navbar
+      } else {
+        gsap.to(window, { duration: 1.0, scrollTo: { y: target, offsetY: 75 }, ease: "power4.inOut" });
+      }
+    });
+  });
+});
+
+/* =========================
+   GSAP REAL MOTION: HERO + SECTIONS
+========================= */
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// HERO entrance (logo + button + bride)
+gsap.from(".hero-logo", { y: 22, opacity: 0, duration: 1.0, ease: "power4.out", delay: 0.1 });
+gsap.from(".btn-primary", { y: 18, opacity: 0, duration: 0.9, ease: "power4.out", delay: 0.25 });
+gsap.from(".hero-image img", { y: 35, opacity: 0, duration: 1.2, ease: "power4.out", delay: 0.15 });
+
+// SERVICES cards: stagger reveal
+gsap.utils.toArray(".service-card").forEach((card) => {
+  gsap.from(card, {
+    y: 50,
+    opacity: 0,
+    duration: 0.9,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+});
+
+// ABOUT text + image
+gsap.from(".about-text", {
+  y: 40,
+  opacity: 0,
+  duration: 1.0,
+  ease: "power4.out",
+  scrollTrigger: { trigger: ".about-section", start: "top 75%" }
+});
+gsap.from(".about-image", {
+  y: 40,
+  opacity: 0,
+  duration: 1.0,
+  ease: "power4.out",
+  scrollTrigger: { trigger: ".about-section", start: "top 75%" }
+});
+
+// GALLERY header
+gsap.from(".gallery-header", {
+  y: 25,
+  opacity: 0,
+  duration: 0.9,
+  ease: "power4.out",
+  scrollTrigger: { trigger: ".gallery-section", start: "top 80%" }
+});
+
+/* =========================
+   SMOOTH LIGHT/DARK MODE TRANSITION (GSAP)
+========================= */
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+// load saved theme
+if (localStorage.getItem("theme") === "dark") body.classList.add("dark");
+
+function animateThemeSwitch(makeDark) {
+  if (prefersReduced) {
+    body.classList.toggle("dark", makeDark);
+    return;
+  }
+
+  // tiny “silk” fade 
+  gsap.to(document.documentElement, {
+    duration: 0.18,
+    opacity: 0.86,
+    ease: "power2.out",
+    onComplete: () => {
+      body.classList.toggle("dark", makeDark);
+      gsap.to(document.documentElement, { duration: 0.22, opacity: 1, ease: "power2.out" });
+    }
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const makeDark = !body.classList.contains("dark");
+    animateThemeSwitch(makeDark);
+    localStorage.setItem("theme", makeDark ? "dark" : "light");
+  });
+}
+</script>
+<script>
+  AOS.init({
+    duration: 1100,        // slow = luxury
+    easing: 'ease-out-cubic',
+    once: true,            // animate only once
+    offset: 120,
+    delay: 80
+  });
+</script>
+
+<script>
+const loader = document.getElementById("luxLoader");
+
+if (!sessionStorage.getItem("luxLoaded")) {
+  sessionStorage.setItem("luxLoaded","true");
+
+  const tl = gsap.timeline({
+    defaults: { ease: "power3.out" },
+    onComplete: () => loader.remove()
+  });
+
+  tl.from(".lux-line", {
+      width: 0,
+      duration: 0.9
+    })
+    .from(".lux-logo", {
+      y: 30,
+      opacity: 0,
+      duration: 1.1
+    }, "-=0.4")
+    .from(".lux-tagline", {
+      opacity: 0,
+      y: 8,
+      duration: 0.8
+    }, "-=0.6")
+
+    /* ✨ PURE DISSOLVE (NO MOVE) */
+    .to(loader, {
+      opacity: 0,
+      filter: "blur(10px)",
+      duration: 1.2,
+      delay: 0.6,
+      ease: "power2.out"
+    });
+
+} else {
+  loader.remove();
+}
+</script>
+<script>
+if (window.matchMedia("(hover: hover)").matches) {
+
+  document.querySelectorAll(".service-card").forEach(card => {
+
+    const popIn = () => {
+      gsap.to(card, {
+        scale: 1.08,
+        y: -10,
+        duration: 0.45,
+        ease: "power3.out",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.18)"
+      });
+    };
+
+    const popOut = () => {
+      gsap.to(card, {
+        scale: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power3.out",
+        boxShadow: "0 18px 45px rgba(0,0,0,0.06)"
+      });
+    };
+
+    card.addEventListener("mouseenter", popIn);
+    card.addEventListener("mouseleave", popOut);
+  });
+
+}
+</script>
+<script>
+if (window.matchMedia("(hover: hover)").matches) {
+
+  document.querySelectorAll(".service-card").forEach(card => {
+    const inner = card.querySelector("img, h3");
+
+    card.addEventListener("mouseenter", () => {
+      if (!inner) return;
+      gsap.to(inner, {
+        y: -6,
+        duration: 0.4,
+        ease: "power3.out"
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      if (!inner) return;
+      gsap.to(inner, {
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out"
+      });
+    });
+  });
+
+}
+</script>
+
+
 </html>
