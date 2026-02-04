@@ -772,6 +772,43 @@ if (window.matchMedia("(hover: hover)").matches) {
 
 }
 </script>
+<script>
+/* ================= ABOUT IMAGE – MOBILE AUTO SWITCH ================= */
+
+const wave = document.querySelector(".liquid-wave");
+let autoSwitchInterval = null;
+
+function startAutoSwitch() {
+  if (!wave || window.innerWidth >= 900) return;
+
+  let isActive = false;
+
+  // clear any previous interval
+  if (autoSwitchInterval) clearInterval(autoSwitchInterval);
+
+  autoSwitchInterval = setInterval(() => {
+    isActive = !isActive;
+    wave.classList.toggle("active", isActive);
+  }, 3500); // ⏱ switch every 3.5 seconds
+}
+
+// Start on load
+startAutoSwitch();
+
+// Re-check on resize (rotate phone / resize browser)
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 900) {
+    // stop auto switch on desktop
+    if (autoSwitchInterval) {
+      clearInterval(autoSwitchInterval);
+      autoSwitchInterval = null;
+    }
+    wave?.classList.remove("active");
+  } else {
+    startAutoSwitch();
+  }
+});
+</script>
 
 
 </html>
