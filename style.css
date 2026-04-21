@@ -1331,6 +1331,9 @@ body.dark .contact-map::after {
   flex-direction: column; /* IMPORTANT */
   overflow: hidden;
   z-index: 9999;
+   transition: all 0.25s ease;
+  transform: translateY(20px);
+  opacity: 0;
 }
 
 

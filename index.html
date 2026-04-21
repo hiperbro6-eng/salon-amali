@@ -839,8 +839,24 @@ const chatBox = document.getElementById("chatBox");
 const chatBody = document.getElementById("chatBody");
 
 chatToggle.onclick = () => {
-  chatBox.style.display =
-    chatBox.style.display === "flex" ? "none" : "flex";
+  if (chatBox.style.display === "flex") {
+    chatBox.style.transform = "translateY(20px)";
+    chatBox.style.opacity = "0";
+
+    setTimeout(() => {
+      chatBox.style.display = "none";
+    }, 200);
+
+  } else {
+    chatBox.style.display = "flex";
+    chatBox.style.transform = "translateY(20px)";
+    chatBox.style.opacity = "0";
+
+    setTimeout(() => {
+      chatBox.style.transform = "translateY(0)";
+      chatBox.style.opacity = "1";
+    }, 10);
+  }
 
   if (chatBody.innerHTML === "") {
     botMessage("Hi! Welcome to Salon Amali ✨ How can I help you?");
@@ -1053,6 +1069,21 @@ Leave a Review
     botMessage("✨ I can help with booking, services, prices, or location. Try asking anything!");
   }
 }
+
+document.addEventListener("click", function (e) {
+  const chatBox = document.getElementById("chatBox");
+  const chatToggle = document.getElementById("chatToggle");
+
+  // if click is NOT inside chat or toggle button → close chat
+  if (
+    chatBox.style.display === "flex" &&
+    !chatBox.contains(e.target) &&
+    !chatToggle.contains(e.target)
+  ) {
+    chatBox.style.display = "none";
+  }
+});
+
 
 </script>
 
