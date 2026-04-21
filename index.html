@@ -281,7 +281,11 @@
     </div>
 
     <div class="gallery-card">
-      <img src="images/gallery8.jpg" alt="">
+      <img src="images/gallery8.jpeg" alt="">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery9.jpg" alt="">
     </div>
 
   </div>
@@ -356,14 +360,34 @@
 </section>
 
 <!-- DARK / LIGHT MODE TOGGLE -->
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-  <span class="sun">☀</span>
-  <span class="moon">🌙</span>
+<button class="theme-toggle" id="chatToggle" aria-label="Open chat">
+  💬
 
   <div class="page-transition" aria-hidden="true"></div>
 
 
 </button>
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Salon Amali Assistant ✨</div>
+
+  <div class="chat-body" id="chatBody"></div>
+
+  <!-- quick actions -->
+  <div class="chat-quick">
+    <button onclick="quickReply('services')">Services</button>
+    <button onclick="quickReply('book')">Book</button>
+    <button onclick="quickReply('contact')">Contact</button>
+    <button onclick="quickReply('feedback')">Feedback</button>
+  </div>
+
+  <!-- user input -->
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button onclick="sendUserInput()">➤</button>
+  </div>
+</div>
+
 
 
 </body>
@@ -444,7 +468,6 @@
 </script>
 
 <script>
-  const toggle = document.getElementById("themeToggle");
   const body = document.body;
 
   // Load saved mode
@@ -809,6 +832,228 @@ window.addEventListener("resize", () => {
   }
 });
 </script>
+<script>
 
+const chatToggle = document.getElementById("chatToggle");
+const chatBox = document.getElementById("chatBox");
+const chatBody = document.getElementById("chatBody");
+
+chatToggle.onclick = () => {
+  chatBox.style.display =
+    chatBox.style.display === "flex" ? "none" : "flex";
+
+  if (chatBody.innerHTML === "") {
+    botMessage("Hi! Welcome to Salon Amali ✨ How can I help you?");
+  }
+};
+
+/* ===== MESSAGES ===== */
+
+function addMessage(text, type) {
+  const msg = document.createElement("div");
+  msg.className = `msg ${type}`;
+  msg.innerHTML = text;
+  chatBody.appendChild(msg);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function userMessage(text) {
+  addMessage(text, "user");
+}
+
+function botMessage(text) {
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    addMessage(text, "bot");
+  }, 800);
+}
+
+/* ===== TYPING ===== */
+
+function showTyping() {
+  const t = document.createElement("div");
+  t.className = "msg bot typing";
+  t.id = "typing";
+  t.innerHTML = `<span></span><span></span><span></span>`;
+  chatBody.appendChild(t);
+
+  chatBody.scrollTo({
+    top: chatBody.scrollHeight,
+    behavior: "smooth"
+  });
+}
+
+
+function removeTyping() {
+  const t = document.getElementById("typing");
+  if (t) t.remove();
+}
+
+/* ===== QUICK ACTIONS ===== */
+
+function quickReply(type) {
+
+  if (type === "services") {
+    userMessage("Services");
+    botMessage(`
+💄 Our Services:<br>
+• Bridal Dressing<br>
+• Mul Adun<br>
+• Facials<br>
+• Nail Artistry<br>
+• Hair Cutting & Coloring<br>
+• Homecoming<br>
+• Coat Rentals<br>
+• Cake
+    `);
+  }
+
+  if (type === "contact") {
+    userMessage("Contact");
+    botMessage(`
+📞 <a href="tel:0777793422">Call Now</a><br>
+💬 <a href="https://wa.me/94704252995" target="_blank">WhatsApp</a><br>
+📍 <a href="https://maps.app.goo.gl/Rjna4d5Z4L2HFFAb6" target="_blank">Location</a>
+    `);
+  }
+
+  if (type === "feedback") {
+    userMessage("Feedback");
+    botMessage(`
+⭐ We’d love your feedback!<br><br>
+👉 <a href="https://g.page/r/CQ7E1UzvekElEAE/review" target="_blank">
+Leave a Review
+</a>
+    `);
+  }
+
+  if (type === "book") {
+    userMessage("Book Appointment");
+    showCalendar();
+  }
+}
+
+/* ===== CALENDAR ===== */
+
+function showCalendar() {
+  botMessage(`
+📅 Select a date:<br><br>
+<input type="date" id="bookingDate" style="padding:6px;">
+<button onclick="confirmBooking()">Confirm</button>
+  `);
+}
+
+function confirmBooking() {
+  const date = document.getElementById("bookingDate").value;
+
+  if (!date) {
+    botMessage("⚠️ Please select a date first.");
+    return;
+  }
+
+  userMessage("Booking for " + date);
+
+  botMessage(`
+✨ Date selected: ${date}<br><br>
+💬 <a href="https://wa.me/94704252995" target="_blank">
+Confirm via WhatsApp
+</a>
+  `);
+}
+function match(text, keywords) {
+  return keywords.some(k => text.includes(k));
+}
+
+/* ===== SMART INPUT (AI-LIKE) ===== */
+function sendUserInput() {
+  const input = document.getElementById("userInput");
+  const text = input.value.toLowerCase().trim();
+
+  if (!text) return;
+
+  userMessage(text);
+  input.value = "";
+
+  /* ===== KEYWORD ENGINE ===== */
+
+  // LOCATION
+  if (match(text, ["locate", "location", "where", "where are you", "where is salon", "find", "find you", "direction", "directions", "map", "show map", "google map", "how to go", "how to reach", "address", "pin", "near", "nearby", "close by", "closest", "distance", "way to go", "route", "location pin"
+])) {
+    botMessage(`
+📍 You can find us here:<br>
+<a href="https://maps.app.goo.gl/Rjna4d5Z4L2HFFAb6" target="_blank">Open Map</a>
+    `);
+  }
+
+  // CONTACT
+  else if (match(text, ["contact", "call", "phone", "number", "whatsapp", "message", "dm", "reach", "reach you", "talk", "speak", "hotline", "customer care", "support", "help line", "mobile", "telephone", "ring", "call you", "send number", "get number"
+])) {
+    botMessage(`
+📞 <a href="tel:0777793422">Call Us</a><br>
+💬 <a href="https://wa.me/94704252995" target="_blank">WhatsApp</a>
+    `);
+  }
+
+  // BOOKING
+  else if (match(text, ["book", "booking", "reserve", "reservation", "appointment", "schedule", "slot", "time slot", "available", "availability", "available dates", "available times", "fix time", "set time", "make appointment", "hair appointment", "salon booking", "can i book", "i want to book", "i need appointment", "book now", "book slot", "free time", "open slots", "when can i come", "what time is available", "any time available", "tomorrow booking", "today booking"
+])) {
+    showCalendar();
+  }
+
+  // PRICE
+  else if (match(text, ["price","prices", "cost", "fee", "fees", "charge", "charges", "rate", "rates", "how much", "how much price", "price list", "pricing", "expensive", "cheap", "budget", "costs", "amount", "payment", "pay", "cost per", "price per", "service price"
+])) {
+    botMessage("💰 Prices depend on the service. Please WhatsApp us for exact pricing.");
+  }
+
+  // SERVICES (FULL PROFESSIONAL COVERAGE)
+  else if (match(text, [
+    "service","services","what do you do","offer","provide",
+    "makeup","bridal","bride","mul adun",
+    "facial","skin","skincare",
+    "nail","nails","manicure",
+    "hair","cut","color","style",
+    "homecoming","dress",
+    "coat","rental", "service", "services", "what do you do", "what do you offer", "menu", "list", "treatment", "treatments", "haircut", "hair cut", "styling", "hair styling", "color", "hair color", "bleach", "straightening", "keratin", "packages", "salon services", "available services", "what services", "options", "offerings"
+
+  ])) {
+    botMessage(`
+💄 Our Services:<br>
+• Bridal Dressing<br>
+• Mul Adun<br>
+• Facials & Skincare<br>
+• Nail Artistry<br>
+• Hair Cutting & Coloring<br>
+• Homecoming Styling<br>
+• Coat Rentals<br>
+• Cake
+    `);
+  }
+
+  // FEEDBACK / REVIEW
+  else if (match(text, ["feedback", "review", "rate", "rating", "rating us", "comment", "suggestion", "suggest", "complaint", "experience", "opinion", "review salon", "give review", "post review", "leave review", "rate service", "how was service", "feedback form", "google review", "testimonial"
+])) {
+    botMessage(`
+⭐ We’d love your feedback!<br><br>
+👉 <a href="https://g.page/r/CQ7E1UzvekElEAE/review" target="_blank">
+Leave a Review
+</a>
+    `);
+  }
+
+  // GREETINGS (makes it feel real)
+  else if (match(text, ["hi", "hello", "hey", "help", "help me", "info", "information", "ask", "question", "support", "good morning", "good evening", "what", "how", "why", "tell me", "about", "details"
+])) {
+    botMessage("Hello! ✨ How can I assist you today?");
+  }
+
+  // FALLBACK (SMART DEFAULT)
+  else {
+    botMessage("✨ I can help with booking, services, prices, or location. Try asking anything!");
+  }
+}
+
+</script>
 
 </html>
